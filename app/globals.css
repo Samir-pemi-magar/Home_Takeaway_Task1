@@ -10,6 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-nohemi: var(--font-nohemi);
+  --font-outfit: var(--font-outfit);
+  --font-fustat: var(--font-fustat)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +21,15 @@
     --foreground: #ededed;
   }
 }
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateX(0);  }
+  50%       { transform: translateX(5px); }
+}
+
+@theme {
+  --animate-arrow-bounce: arrow-bounce 1000ms ease-in-out infinite;
+}
+
 
 body {
   background: var(--background);
